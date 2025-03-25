@@ -1,13 +1,32 @@
-document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault(); // Impede o envio do formulário
+const login = async () => {
+    const email = document.getElementById('username').value;
+    const senha = document.getElementById('password').value
     
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    const data = {
+        email: email,
+        senha: senha
+    };
 
-    if (!username || !password) {
-        alert('Por favor, preencha todos os campos.');
-    } else {
-        alert('Login realizado com sucesso!');
-        // Aqui você pode adicionar a lógica para enviar os dados ou navegar para outra página
+    const url = "https://back-spider.vercel.app/login";
+
+    // Informações importantes para enviar na requisição
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
     }
-});
+    
+    try {
+        const response = await fetch(url, options)
+        const result = await response.json()
+        console.log("Resposta da API:", result)
+    } catch (error) {
+        console.error("Erro ao fazer login:", error)
+    }
+}
+
+    //await fetch(url)
+    //get
+
