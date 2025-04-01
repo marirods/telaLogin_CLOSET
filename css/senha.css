@@ -19,16 +19,47 @@ body {
     margin: 0;
 }
 
-.senha_card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #F5F5F5;
-    padding: 40px 50px 10px 50px; 
-    width: 700px;
-    height: 500px;
-    text-align: center;
-    border-radius: 60px;
+
+input{
+    font-size: 20px;
+    padding: 18px;
+    border-radius: 20px;
+    padding-left: 18px;
+    background-color: #F5F5F5;
+    border: none;
+    margin-top: 22px;
+    width: 35vw;
+
 }
 
+.allElements{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start ;
+    flex-direction: column;
+    margin-top: 8%;
+    font-weight: 400;
+    font-style: normal;
+    color: #F5F5F5;
+  
+}
+
+button{
+    width: 12vw;
+    font-size: 26px;
+    padding: 20px;
+    background-color: #F5F5F5;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 30px;
+    font-family: martel-light;
+}
+
+button:hover{
+    background-color: #E0E0E0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}

@@ -88,6 +88,7 @@ button{
     border: none;
     cursor: pointer;
     margin-top: 30px;
+    font-family: martel-light;
   
 }
 
@@ -99,6 +100,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     gap: 30px;
+    font-family: martel-light;
 }
 
 
