@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +7,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
     <title>Recuperação de Senha</title>
     <link rel="stylesheet" href="../css/senha.css">
-    <script src="../js/redefinirsenha.js" defer></script>
+    <script src="../js/postSenha.js" type="module" defer></script>
 </head>
 <body>
 
     <div class="allElements">
         <div id="tela_senha" class="senha_card">
             <h1>Redefinir Senha</h1>
-            <p>Digite o email cadastrado para alterar sua senha.</p>
+            <p>Digite o email e a palavra chave cadastrados para alterar sua senha.</p>
             <input type="email" id="userEmail" placeholder="Email*">
+            <input type="senha" id="palavraChave" placeholder="Palavra-Chave*">
         </div>
     
-        <div class="button">"
-            <button id="nextButton" onclick="proximo()">PRÓXIMO</button>
+        <div class="button">
+            <button id="nextButton">PRÓXIMO</button>
         </div>
     </div>
     
