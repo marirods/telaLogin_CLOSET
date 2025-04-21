@@ -54,18 +54,16 @@ const criarDados = async (nome, email, senha, palavraChave) => {
 
         const response = await fetch(url, options)
 
-        console.log(response);
+        // console.log(response);
         
 
         if (!response.ok) {
             return "Erro ao cadastrar usuário!"
-        }
+        }else{
 
-        const result = await response.json()
-
-        if (result) {
-            window.location.href = "./indexs/palavraChave.html"
-            return;  
+            const result = await response.json()
+            window.location.href = "../index.html"
+            return result ('cadastro concluido') 
         }
 
     } catch (error) {
