@@ -1,11 +1,15 @@
+'use strict'
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById('nextButton').addEventListener('click', async () => {
 
-const digiteSenhaInput = document.getElementById('digiteSenha')
-const confirmarSenhaInput = document.getElementById('confirmarSenha')
+const digiteSenhaInput = document.getElementById('digiteSenha').value || ""
+const confirmarSenhaInput = document.getElementById('confirmarSenha').value || ""
 const nextButton = document.getElementById('nextButton')
 
 async function putPassword(senha, idUser) {
   const dados = {
     senha: senha,
+    idUser: idUser
   }
   try {
     const response = await fetch(`https://back-spider.vercel.app/user/newPassword/${3}`, {
@@ -43,4 +47,6 @@ nextButton.addEventListener('click', async function () {
   } else {
     alert('Senhas precisam ser iguais.')
   }
+})
+  })
 })

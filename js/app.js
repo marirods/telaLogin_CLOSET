@@ -1,31 +1,39 @@
+'use strict';
+
 const login = async () => {
     const email = document.getElementById('username').value;
-    const senha = document.getElementById('password').value
-    
-    const data = {
-        email: email,
-        senha: senha
-    };
+    const senha = document.getElementById('password').value;
 
+    const data = { email, senha };
     const url = "https://back-spider.vercel.app/login";
 
-    // Informações importantes para enviar na requisição
     const options = {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(data)
-    }
-    
+    };
+
     try {
-        const response = await fetch(url, options)
-        const result = await response.json()
-        console.log("Resposta da API:", result)
+        const response = await fetch(url, options);
+        const result = await response.json();
+
+        console.log("Resposta da API:", result);
+
+        if (result.success) {
+            window.location.href = "./indexs/home.html";
+        } else {
+            alert("Erro: " + (result.message || "Login inválido"));
+        }
+
     } catch (error) {
-        console.error("Erro ao fazer login:", error)
+        console.error("Erro ao fazer login:", error);
+        alert("Erro de rede ou servidor. Tente novamente mais tarde.");
     }
-}
+};
+
+
 
     //await fetch(url)
     //get

@@ -4,32 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/home.css">
-    <script src="./APIHome.js" type="module" defer></script>
-    <title>TELA HOME</title>
-
+    <script src="./APIHome.js" defer></script>
 </head>
 <body>
+   
+
+    <h2>OLÁ, USER!</h2>
+    <div class="underline"></div>
+
+  
+    
+
+    <main class = "conteudo_principal">
+                <form action="#" class="formulario_principal">
+                    <textarea name="publicacao_info" placeholder="O que você está pensando?"></textarea>
+                    <button type="submit">Publicar</button>
+                </form>
+    </main>
     <main class="container">
         <section class="welcome-section">
             <div class="logo">
-                <img src="./Captura de tela logo2png" alt="">
+                <img src="../img/logo.png" alt="">
             </div>
-            <h2>OLÁ, USER!</h2>
-
-            <div class="underline"></div>
         </section>
 
         <section class="card-acoes">
             <div class="card-acoes-item">
-                <div class="icon"><img src="/img/Carregar itens.png" alt="Upload"></div>
+                <div class="icon"><img src="../img/Carregar itens.png" alt="Upload"></div>
                 <p>Carregar Itens</p>
             </div>
             <div class="card-acoes-item">
-                <div class="icon"><img src="./Roupa.png" alt="Criar Roupas"></div>
+                <div class="icon"><img src="../img/Roupa.png" alt="Criar Roupas"></div>
                 <p>Criar Roupas</p>
             </div>
             <div class="card-acoes-item">
-                <div class="icon"><img src="/img/Agendar.png" alt="Agendar Roupas"></div>
+                <div class="icon"><img src="../img/Agendar.png" alt="Agendar Roupas"></div>
                 <p>Agendar roupas</p>
             </div>
         </section>
@@ -43,28 +52,50 @@
                     <div class="publi-user">U</div>
                     <p>@user</p>
                     <div class="images">
-                        <img src="./Foto.png" alt="">
-                        <img src="./Foto.png" alt="">
+                        <img src="../img/Foto.png" alt="">
+                        <img src="../img/Foto.png" alt="">
                     </div>
                 </div>
                 <div class="user-card">
                     <div class="publi-user">U</div>
                     <p>@user</p>
                     <div class="images">
-                        <img src="./Foto.png" alt="">
-                        <img src="./Foto.png" alt="">
+                        <img src="../img/Foto.png" alt="">
+                        <img src="../img/Foto.png" alt="">
                     </div>
                 </div>
                 <div class="user-card">
                     <div class="publi-user">U</div>
                     <p>@user</p>
                     <div class="images">
-                        <img src="./Foto.png" alt="">
-                        <img src="./Foto.png" alt="">
+                        <img src="../img/Foto.png" alt="">
+                        <img src="../img/Foto.png" alt="">
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- NOVA SEÇÃO: Postagens -->
+        <section class="postagens">
+            <h3>Postagens da Comunidade</h3>
+            <div class="postagem-card">
+                <div class="postagem-usuario">
+                    <div class="avatar">U</div>
+                    <p>@user</p>
+                </div>
+                <p>Essa é uma postagem da comunidade com imagem.</p>
+                <img src="https://via.placeholder.com/300x150" alt="Imagem da postagem">
+            </div>
+
+            <div class="postagem-card">
+                <div class="postagem-usuario">
+                    <div class="avatar">U</div>
+                    <p>@user</p>
+                </div>
+                <img src="../img/exemplo-postagem.png" alt="Postagem do usuário">
+            </div>
+        </section>
+
     </main>
 </body>
 </html>
