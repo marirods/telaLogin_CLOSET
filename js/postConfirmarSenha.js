@@ -49,4 +49,3 @@ nextButton.addEventListener('click', async function () {
   }
 })
   })
-})
