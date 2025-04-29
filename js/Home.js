@@ -24,10 +24,8 @@ async function getPosts (){
 
 
 
-async function dadosPublicacao(publicacao){
-
+async function dadosPublicacao(publicacao) {
     const user = await getUsersbyId(publicacao.idUsuario)
-    const localPublicacao = document.getElementById('publicacao')
 
     const divPublicacao = document.createElement('div')
     divPublicacao.className =  "postagem-card"
@@ -44,6 +42,8 @@ async function dadosPublicacao(publicacao){
     const botaoComentarios = document.createElement('button')
     const spanComentarios =  document.createElement('span')
     const spanLikes =  document.createElement('span')
+    const ImgLikes = document.createElement('img')
+    const ImgComentarios = document.createElement('img')
 
     const h4 = document.createElement('h4')
     const img = document.createElement('img')
@@ -53,28 +53,40 @@ async function dadosPublicacao(publicacao){
     const divImg = document.createElement('div')
     const imgPublicacao = document.createElement('img')
 
+    botaoLikes.className = "icone"
+    botaoComentarios.className = "icone"
+
+    ImgLikes.src = "../img/likes2.png"
+    ImgComentarios.src = "../img/comentarios2.png"
 
 
     p.textContent = publicacao.descricao
     spanData.textContent = publicacao.dataPublicacao
     h4.textContent = user.nome 
     img.src = user.imagemPerfil
-    spanComentarios.textContent = publicacao.comentarios
-    spanLikes.textContent = publicacao.likes
+    spanComentarios.textContent = publicacao.comentarios.length
+    spanLikes.textContent = publicacao.curtidas.length
     imgPublicacao.src = publicacao.imagem
 
 
-    
-    divTop.appendChild(divImgName)
-    divImgName.appendChild(h4)
-    divImgName.appendChild(img)
-    divTop.appendChild(spanData)
+    botaoComentarios.appendChild(ImgComentarios)
+    botaoLikes.appendChild(ImgLikes)
 
+    divTop.className = "divTop"
+    divImgName.className = "divImgName"
+    img.className = "divImgName"
+    divIcons.className = "divIcons"
+    
+
+    divTop.appendChild(divImgName)
+    
+    divImgName.appendChild(img)
+    divImgName.appendChild(h4)
+    divTop.appendChild(spanData)
 
     divConteudo.appendChild(p)
     divImg.appendChild(imgPublicacao)
     divConteudo.appendChild(divImg)
-
 
     divBaixo.appendChild(divIcons)
 
@@ -90,11 +102,9 @@ async function dadosPublicacao(publicacao){
     divPublicacao.appendChild(divConteudo)
     divPublicacao.appendChild(divBaixo)
 
-    localPublicacao.appendChild(divPublicacao)
-
-
-    
+    return divPublicacao
 }
+
 
 //
 async function getUsersbyId (id){
