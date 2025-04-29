@@ -5,6 +5,13 @@
     padding: 0;
 }
 
+
+a{
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color:rgba(204, 201, 201, 0.8);
@@ -14,7 +21,9 @@ body {
     overflow: scroll;
 }
 
-
+h2{
+  padding-top: 12px;
+}
 
 
 form {
@@ -57,13 +66,17 @@ textarea::placeholder {
   padding: 8px 20px;
   font-size: 14px;
   font-weight: bold;
-  background-color: #934747;
+  background-color: #BB4D4D;
   border: none;
   color: white;
   border-radius: 20px;
   cursor: pointer;
   align-self: flex-end;
   transition: background-color 0.3s ease;
+}
+
+.button_publicar:hover{
+  background-color: #934747;
 }
 
 button {
@@ -79,9 +92,6 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #934747;
-}
 
 
 .container {
@@ -115,6 +125,7 @@ h2 {
     gap: 100px;
     margin-bottom: 50px;
 }
+
 
 .card-acoes-item {
     background-color: white;
@@ -205,7 +216,7 @@ h2 {
     flex-direction: column;
     padding: 20px;
     margin: 0 auto 20px auto;
-    max-width: 600px;
+    max-width: 80%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 

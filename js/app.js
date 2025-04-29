@@ -22,6 +22,7 @@ const login = async () => {
         console.log("Resposta da API:", result);
 
         if (result.success) {
+            localStorage.setItem("user", data)
             window.location.href = "./indexs/home.html";
         } else {
             alert("Erro: " + (result.message || "Login inválido"));
